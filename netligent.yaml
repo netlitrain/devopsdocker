@@ -19,7 +19,7 @@
          name: net1
          source: build
          build:
-           path: /var/lib/jenkins/workspace/ansibledocker/
+           path: /home/ubuntu/
            pull: false
 
       - name : docker container creation
