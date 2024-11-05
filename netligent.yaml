@@ -14,22 +14,22 @@
         src: /var/lib/jenkins/workspace/ansibledocker/Dockerfile
         dest: /home/ubuntu/
 
-     - name: docker image creation
-     - docker_image:
-         name: net1
-         source: build
-         build:
-           path: /home/ubuntu/
-           pull: false
+    - name: docker image creation
+    - docker_image:
+        name: net1
+        source: build
+        build:
+          path: /home/ubuntu/
+          pull: false
 
-      - name : docker container creation
-      - docker_container:
-          name: cs4
-          image: net1
-          detach: true
-          state: started
-          tty: true
-          exposed_ports:
-          - "80"
-          ports:
-          - "80:80"
+    - name : docker container creation
+    - docker_container:
+        name: cs4
+        image: net1
+        detach: true
+        state: started
+        tty: true
+        exposed_ports:
+        - "80"
+        ports:
+        - "80:80"
