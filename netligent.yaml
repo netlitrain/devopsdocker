@@ -5,6 +5,7 @@
   tasks:
     - name: docker installation
       apt:
+        update_cache: yes
         name: docker.io
         state: present
 
